@@ -1,14 +1,18 @@
 import React from 'react'
-//import ReviewItem from './ReviewItem'
+import ReviewItem from './ReviewItem'
 
-const ReviewList = () => {
-  // You can add state here later to manage the list of reviews
+function ReviewList() {
+  // This is just example data. In a real app, you'd probably fetch this from an API or database
+  const reviews = [
+    { id: 1, title: "Great Movie", content: "I really enjoyed this film!" },
+    { id: 2, title: "Okay Book", content: "It was an average read." }
+  ]
+
   return (
-    <div>
-      <h2>Review List</h2>
-      {/* <ReviewItem />
-      <ReviewItem /> */}
-      {/* Add more ReviewItems as needed */}
+    <div className="review-list">
+      {reviews.map(review => (
+        <ReviewItem key={review.id} review={review} />
+      ))}
     </div>
   )
 }
