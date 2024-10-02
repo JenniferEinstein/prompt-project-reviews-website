@@ -2,15 +2,17 @@ import React, { useState } from 'react'
 
 function ReviewSubmissionForm() {
   const [title, setTitle] = useState('')
+  const [reviewerName, setReviewerName] = useState('')
   const [content, setContent] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
     // Here you would typically handle the submission,
     // such as sending the data to an API or updating state
-    console.log('Submitted:', { title, content })
+    console.log('Submitted:', { title, reviewerName, content })
     // Clear the form after submission
     setTitle('')
+    setReviewerName('')
     setContent('')
   }
 
@@ -25,6 +27,16 @@ function ReviewSubmissionForm() {
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="reviewerName">Your Name:</label>
+          <input
+            type="text"
+            id="reviewerName"
+            value={reviewerName}
+            onChange={(e) => setReviewerName(e.target.value)}
             required
           />
         </div>
