@@ -1,9 +1,9 @@
-import React from 'react'
+
 
 function Footer() {
   return (
-    <footer>
-      <p>&copy; 5785 My Reviews Website. All rights reserved.</p>
+    <footer className="bg-gray-200 p-4 text-right">
+      <p className="text-sm text-gray-600">&copy; 5785 My Reviews Website. All rights reserved.</p>
     </footer>
   )
 }

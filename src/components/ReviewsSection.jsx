@@ -4,7 +4,7 @@ import ReviewSubmissionForm from './ReviewSubmissionForm'
 
 function ReviewsSection() {
   return (
-    <section className="reviews-section">
+    <section className="mt-8">
       <ReviewList />
       <ReviewSubmissionForm />
     </section>
